@@ -1,25 +1,29 @@
-package ui;
 import java.util.Scanner;
 
 public class Arreglos{
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         
-        int tam =in.nextInt();
+        System.out.print("Ingresa el numero de datos a registrar: ");
+        int tam = in.nextInt();
+        in.nextLine();
 
-        int[] notas = new notas[tam];
-        String[] nombres = new nombres[tam];
+        double[] notas = new double[tam];
+        String[] nombres = new String[tam];
 
         for(int i = 0; i < notas.length; i++) {
-            System.out.print("Nombre:");
-            nombres[i];
-
-            System.out.print("Nota:");
-            notas[i];
+            System.out.println("Nombre:");
+            String nombre = in.nextLine();
+            nombres[i] = nombre;
+            
+            System.out.println("Nota:");
+            Double nota = in.nextDouble();
+            in.nextLine();
+            notas[i] = nota;
         }
 
         for(int i = 0; i < notas.length; i++) {
-            System.out.print(nombres[i] + "saco " + notas[i]);
+            System.out.println(nombres[i] + " saco " + notas[i]);
         }
 
     }
